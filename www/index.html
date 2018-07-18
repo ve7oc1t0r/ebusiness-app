@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+   
+	<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+	<script src="jquery-1.11.1.min.js"></script>
+	<script src="jquery.mobile-1.4.5.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWZ457JxHSd_OFf8v8djxB9e1p7qBMEP0"></script>
+	
+    <title>FitTrack</title>
+</head>
+
+<body>
+    <div data-role="page" id="home">
+
+    <div data-role="header">
+
+        <h1>Home</h1>
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
+                <li><a href="#tracker" data-transition="none" data-icon="plus">Tracker</a></li>
+                <li><a href="#tracks" data-transition="none" data-icon="grid">Tracks</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+    <div data-role="page" id="tracker">
+        <div data-role="header">
+
+            <h1>Home</h1>
+
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
+                    <li><a href="#tracker" data-transition="none" data-icon="plus">Tracker</a></li>
+                    <li><a href="#tracks" data-transition="none" data-icon="grid">Tracks</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content">
+            <p>
+                <h1>Tracker</h1>
+
+                Trackname:<br>
+
+            <input type="text" id="trackname"></input><br>
+
+
+                <!--<button type="button" id="kamera" type="button" >Kamera</button>-->
+                <button type="button" id="start" type="button">Start</button>
+                <button type="button" id="stop" type="button" style="display:none;">Stop</button>
+
+
+            </p>
+
+            <img id="myImage" src="" style="display:none;width:60px;height:60px;" />
+        </div>
+
+    </div>
+
+    <div data-role="page" id="tracks">
+        <div data-role="header">
+
+            <h1>Home</h1>
+
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-transition="none" data-icon="home">Home</a></li>
+                    <li><a href="#tracker" data-transition="none" data-icon="plus">Tracker</a></li>
+                    <li><a href="#tracks" data-transition="none" data-icon="grid">Tracks</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content">
+            <div id="mapContainer" style="width:300px;height:400px;"></div>
+        </div>
+
+    </div>
+
+    
+	
+	
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="indexneu.js"></script>
+    <script type="text/javascript">app.initialize();</script>
+</body>
+
+</html>
