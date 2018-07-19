@@ -8,6 +8,7 @@
         "cordova-plugin-compat": "^1.2.0",
         "cordova-plugin-geolocation": "^2.4.3",
         "cordova-plugin-googlemaps": "^2.3.8",
+        "cordova-plugin-nativestorage": "^2.3.2",
         "cordova-plugin-whitelist": "1",
         "minimist": "^1.2.0",
         "xml2js": "^0.4.19"
@@ -17,7 +18,8 @@
             "cordova-plugin-whitelist": {},
             "cordova-plugin-geolocation": {
                 "GEOLOCATION_USAGE_DESCRIPTION": " "
-            }
+            },
+            "cordova-plugin-nativestorage": {}
         },
         "platforms": [
             "browser"

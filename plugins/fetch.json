@@ -32,5 +32,13 @@
     "variables": {
       "API_KEY_FOR_ANDROID": "AIzaSyBWZ457JxHSd_OFf8v8djxB9e1p7qBMEP0"
     }
+  },
+  "cordova-plugin-nativestorage": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-nativestorage"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

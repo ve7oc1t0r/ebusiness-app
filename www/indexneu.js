@@ -1,6 +1,7 @@
 var app;
 var koordinaten = [];
 var trackname;
+var tracks = ["Beispieltrack"];
 app = {
 
     map: null,
@@ -30,10 +31,12 @@ app = {
         $("#stop").bind("click", app.stopTracking);
         app.bestimmePosition();
         app.ladeGoogleMap();
-        if(window.localStorage.getitem("tracks")==null){
-            var trackarray = null;
-            window.localStorage.setItem("tracks", JSON.stringify(trackarray));
-        }
+        app.loadTrack();
+
+
+        var trackarray = ["Beispieltrack"];
+        localStorage.setItem("tracks", JSON.stringify(trackarray));
+        alert(JSON.parse(localStorage.getItem("tracks")));
 
 
     },
@@ -42,12 +45,10 @@ app = {
         $("#start").hide();
         $("#stop").show();
         trackname = $("#trackname").val();
-        alert("BUTTONpress");
-
 
         app.k = navigator.geolocation.watchPosition(
             function (position) {
-                koordinaten.push(position);
+                koordinaten.push({lat: position.coords.latitude, lng: position.coords.longitude});
                 alert("Tracking now");
 
             },
@@ -59,53 +60,63 @@ app = {
 
     },
 
+
+
     stopTracking: function () {
         $("#stop").hide();
         $("#start").show();
         //app.starteKamera();
         navigator.geolocation.clearWatch(app.k);
+
+
         app.displayTrack();
+        app.saveData();
+        app.loadTrack();
 
-        window.localStorage.setItem("koordinaten" + trackname, JSON.stringify(koordinaten));
-
-        var tracks = JSON.parse(window.localStorage.getItem("tracks"));
-        tracks.push(trackname);
-        window.localStorage.setItem("tracks",JSON.stringify(tracks));
-
-        koordinaten = null;
+        koordinaten = [];
 
 
     },
 
-    loadTrack: function(){
+    saveData: function () {
+        alert("speichern0");
+        trackname = $("#trackname").val();
+        alert("Speichern1");
+        localStorage.setItem("koordinaten" + trackname, JSON.stringify(koordinaten));
+        alert("Speichern2");
+        tracks = JSON.parse(localStorage.getItem("tracks"));
+        alert("Speichern3");
+        tracks.push(trackname);
+        alert("Speichern4");
+        localStorage.setItem("tracks", JSON.stringify(tracks));
+        alert("Daten gespeichert");
+    },
 
-        var tracks = JSON.parse(window.localStorage.getItem("tracks"));
-        for(var i = 0; i< tracks.length; i++){
-            
+    loadTrack: function () {
+        $('#trackdiv').empty();
+        var loadedtracks = JSON.parse(window.localStorage.getItem("tracks"));
+
+        for (var i = 0; i < loadedtracks.length; i++) {
+            $('#trackdiv').append('<div id="' + i + '" class="trackdiv"><a href="index.html#mappage">' + loadedtracks[i]+ '</a></div>');
         }
+        koordinaten=[];
+        koordinaten = JSON.parse(window.localStorage("koordinaten"+trackname));
+        app.displayTrack();
+
 
     },
 
     displayTrack: function () {
-        var markerkoordinaten = [];
 
-        for (var i = 0; i < koordinaten.length; i++) {
-            markerkoordinaten[i] = {lat: koordinaten[i].coords.latitude, lng: koordinaten[i].coords.longitude};
-            alert(markerkoordinaten[0].lat);
+        alert("marker gesetzt mit : " + koordinaten[0].lat);
+        var startmarker = new google.maps.Marker({
+            position: koordinaten[0],
+            title: 'Start'
+        });
 
-            if (i == 0) {
-                alert("marker gesetzt mit : " + markerkoordinaten[0].lat);
-                var startmarker = new google.maps.Marker({
-                    position: markerkoordinaten[0],
-                    title: 'Start'
-                });
-
-            }
-
-        }
 
         var waypoints = new google.maps.Polyline({
-            path: markerkoordinaten,
+            path: koordinaten,
             geodesic: true,
             strokeColor: 'FFFFFF',
             strokeOpacity: 1.0,
@@ -115,12 +126,12 @@ app = {
         waypoints.setMap(app.map);
 
 
-        markerkoordinaten = null;
         var distance;
-        for (var i = 0; i < markerkoordinaten.length - 1; i++) {
-            distance += distance(markerkoordinaten[i].lat, markerkoordinaten[i].lng, markerkoordinaten[i + 1].lat, markerkoordinaten[i + 1].lng, "K");
+        for (var i = 0; i < koordinaten.length - 1; i++) {
+            distance += distance(koordinaten[i].lat, koordinaten[i].lng, koordinaten[i + 1].lat, koordinaten[i + 1].lng, "K");
 
         }
+
 
     },
 

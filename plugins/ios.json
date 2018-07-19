@@ -13,6 +13,9 @@
     "cordova-plugin-geolocation": {
       "GEOLOCATION_USAGE_DESCRIPTION": " ",
       "PACKAGE_NAME": "io.cordova.myapp712b36"
+    },
+    "cordova-plugin-nativestorage": {
+      "PACKAGE_NAME": "io.cordova.myapp712b36"
     }
   },
   "dependent_plugins": {
