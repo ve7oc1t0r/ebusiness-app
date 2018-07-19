@@ -61,7 +61,6 @@ app = {
     },
 
 
-
     stopTracking: function () {
         $("#stop").hide();
         $("#start").show();
@@ -69,7 +68,7 @@ app = {
         navigator.geolocation.clearWatch(app.k);
 
 
-        app.displayTrack();
+        app.displayTrack(trackname);
         app.saveData();
         app.loadTrack();
 
@@ -79,15 +78,15 @@ app = {
     },
 
     saveData: function () {
-        alert("speichern0");
+
         trackname = $("#trackname").val();
-        alert("Speichern1");
+
         localStorage.setItem("koordinaten" + trackname, JSON.stringify(koordinaten));
-        alert("Speichern2");
+
         tracks = JSON.parse(localStorage.getItem("tracks"));
-        alert("Speichern3");
+
         tracks.push(trackname);
-        alert("Speichern4");
+
         localStorage.setItem("tracks", JSON.stringify(tracks));
         alert("Daten gespeichert");
     },
@@ -97,16 +96,14 @@ app = {
         var loadedtracks = JSON.parse(window.localStorage.getItem("tracks"));
 
         for (var i = 0; i < loadedtracks.length; i++) {
-            $('#trackdiv').append('<div id="' + i + '" class="trackdiv"><a href="index.html#mappage">' + loadedtracks[i]+ '</a></div>');
+            $('#trackdiv').append('<div id="' + i + '" class="trackdiv"><a href="index.html#mappage" onclick="app.displayTrack(' + trackname + ')">' + loadedtracks[i] + '</a></div>');
         }
-        koordinaten=[];
-        koordinaten = JSON.parse(window.localStorage("koordinaten"+trackname));
-        app.displayTrack();
+        koordinaten = [];
 
 
     },
 
-    displayTrack: function () {
+    displayTrack: function (trackname) {
 
         alert("marker gesetzt mit : " + koordinaten[0].lat);
         var startmarker = new google.maps.Marker({
@@ -131,8 +128,7 @@ app = {
             distance += distance(koordinaten[i].lat, koordinaten[i].lng, koordinaten[i + 1].lat, koordinaten[i + 1].lng, "K");
 
         }
-
-
+        koordinaten = [];
     },
 
     distance: function (lat1, lon1, lat2, lon2, unit) {
