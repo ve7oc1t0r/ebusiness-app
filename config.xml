@@ -23,7 +23,7 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <platform name="android">
-        
+
     </platform>
     <platform name="ios">
         <icon height="180" src="res/icons/ios/icon-60-3x.png" width="180" />

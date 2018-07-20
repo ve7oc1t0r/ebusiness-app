@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b91d801-d258-4b98-a4b4-ab84948a3378" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/indexneu.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/indexneu.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,20 +37,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indexneu.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="indexneu.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/indexneu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="158" column="73" lean-forward="true" selection-start-line="158" selection-start-column="73" selection-end-line="158" selection-end-column="73" />
+            <state relative-caret-position="487">
+              <caret line="240" column="13" selection-start-line="240" selection-start-column="8" selection-end-line="240" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -75,8 +75,8 @@
     <findStrings>
       <find>startstop</find>
       <find>koordinaten</find>
-      <find>alert</find>
       <find>var tracks</find>
+      <find>alert</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -88,8 +88,8 @@
         <option value="$PROJECT_DIR$/js/index.js" />
         <option value="$PROJECT_DIR$/www/index.js" />
         <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/indexneu.js" />
         <option value="$PROJECT_DIR$/config.xml" />
+        <option value="$PROJECT_DIR$/www/indexneu.js" />
       </list>
     </option>
   </component>
@@ -226,12 +226,12 @@
       <workItem from="1531215322026" duration="5814000" />
       <workItem from="1531855138751" duration="19278000" />
       <workItem from="1532002723491" duration="2922000" />
-      <workItem from="1532006322022" duration="20902000" />
+      <workItem from="1532006322022" duration="21199000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57640000" />
+    <option name="totallyTimeSpent" value="57937000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -505,17 +505,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/indexneu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="158" column="73" lean-forward="true" selection-start-line="158" selection-start-column="73" selection-end-line="158" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/indexneu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="240" column="13" selection-start-line="240" selection-start-column="8" selection-end-line="240" selection-end-column="13" />
         </state>
       </provider>
     </entry>

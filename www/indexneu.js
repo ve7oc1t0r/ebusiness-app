@@ -59,7 +59,7 @@ app = {
         app.k = navigator.geolocation.watchPosition(
             function (position) {
                 koordinaten.push({lat: position.coords.latitude, lng: position.coords.longitude});
-                alert("Tracking");
+
 
 
             },
@@ -128,9 +128,9 @@ app = {
 
     displayTrack: function (trackname) {
 
-        alert("Track anzeigen");
+
         koordinaten = JSON.parse(window.localStorage.getItem("koordinaten"+trackname));
-        alert(koordinaten[0].lat + koordinaten[0].lng);
+
         var startmarker = new google.maps.Marker({
             position: koordinaten[0],
             title: 'Start'
@@ -217,7 +217,7 @@ app = {
                 destination: 1
             };
         navigator.camera.getPicture(function (imageData) {
-            alert(imageData);
+
             window.localStorage.setItem("bild"+trackname,imageData);
             var finishmarker = new google.maps.Marker(
                 {
