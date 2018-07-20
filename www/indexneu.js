@@ -1,6 +1,8 @@
 var app;
 var tracks = ["Beispieltrack"];
 var koordinaten = [];
+var starttime = 0;
+var time=0;
 app = {
 
     map: null,
@@ -66,6 +68,8 @@ app = {
                 alert("GPS Fehler!!!!!!!!!!!!!!!!!!!!!!!!");
             }
         );
+        starttime = Math.round((new Date()).getTime() / 1000);
+
 
     },
 
@@ -86,11 +90,14 @@ app = {
         window.location.href="#mappage";
 
         koordinaten = [];
+        time = starttime -  Math.round((new Date()).getTime() / 1000);
 
 
 
 
     },
+
+
 
     saveData: function (trackname) {
 
@@ -148,6 +155,8 @@ app = {
             distance += app.distanceCalc(koordinaten[i].lat, koordinaten[i].lng, koordinaten[i + 1].lat, koordinaten[i + 1].lng, "K");
 
         }
+        time /=60;
+        $('#timedistance').append('<p>Dauer: '+time/60+':'+time%60+'</p><<p>Distanz:'+distance+'</p>');
         koordinaten = [];
 
     },
@@ -205,17 +214,18 @@ app = {
     starteKamera: function (trackname) {
         var options =
             {   quality: 50,
-                destinationType: Camera.DestinationType.FILE_URI
+                destination: 1
             };
-        navigator.camera.getPicture(function (imageURI) {
-            window.localStorage.setItem("bild"+trackname,imageURI);
+        navigator.camera.getPicture(function (imageData) {
+            alert(imageData);
+            window.localStorage.setItem("bild"+trackname,imageData);
             var finishmarker = new google.maps.Marker(
                 {
                     position: koordinaten[koordinaten.length-1],
                     title: 'finish',
                     icon :
                         {
-                            url: window.localStorage.getItem("bild"+trackname),
+                            url: imageURI,
                             scaledSize: new google.maps.Size(40, 40)
                         }
                 }
