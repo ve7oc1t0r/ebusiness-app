@@ -203,27 +203,29 @@ app = {
     },
 
     starteKamera: function (trackname) {
-        var options = {
-            destinationType: 1
-        };
-        navigator.camera.getPicture(app.onSuccess, app.OnFail, options);
+        var options =
+            {   quality: 50,
+                destinationType: Camera.DestinationType.FILE_URI
+            };
+        navigator.camera.getPicture(function (imageURI) {
+            window.localStorage.setItem("bild"+trackname,imageURI);
+            var finishmarker = new google.maps.Marker(
+                {
+                    position: koordinaten[koordinaten.length-1],
+                    title: 'finish',
+                    icon :
+                        {
+                            url: window.localStorage.getItem("bild"+trackname),
+                            scaledSize: new google.maps.Size(40, 40)
+                        }
+                }
+            )
+            finishmarker.setMap(app.map);
+
+        }, app.onFail, options);
     },
 
-    onSuccess: function (imageData) {
-        window.localStorage.setItem("bild"+trackname,imageData);
-        var finishmarker = new google.maps.Marker(
-            {
-                position: koordinaten[koordinaten.length-1],
-                title: 'finish',
-                icon :
-                    {
-                        url: window.localStorage.getItem("bild"+trackname),
-                        scaledSize: new google.maps.Size(40, 40)
-                    }
-            }
-        )
-        finishmarker.setMap(app.map);
-    },
+
 
     onFail: function () {
         alert("Fehler");
