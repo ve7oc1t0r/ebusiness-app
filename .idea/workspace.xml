@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4b91d801-d258-4b98-a4b4-ab84948a3378" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/indexneu.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/indexneu.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -29,8 +30,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1615">
-              <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
+            <state relative-caret-position="340">
+              <caret line="92" column="44" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#button#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -41,8 +42,8 @@
       <file leaf-file-name="indexneu.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/indexneu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="105" column="37" selection-start-line="105" selection-start-column="37" selection-end-line="105" selection-end-column="37" />
+            <state relative-caret-position="604">
+              <caret line="220" column="64" lean-forward="true" selection-start-line="220" selection-start-column="64" selection-end-line="220" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -68,6 +69,7 @@
       <find>startstop</find>
       <find>koordinaten</find>
       <find>alert</find>
+      <find>var tracks</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -111,9 +113,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1352" />
-    <option name="width" value="1393" />
-    <option name="height" value="1770" />
+    <option name="x" value="-13" />
+    <option name="y" value="-13" />
+    <option name="width" value="1848" />
+    <option name="height" value="2760" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -197,12 +200,12 @@
       <workItem from="1531215322026" duration="5814000" />
       <workItem from="1531855138751" duration="19278000" />
       <workItem from="1532002723491" duration="2922000" />
-      <workItem from="1532006322022" duration="7250000" />
+      <workItem from="1532006322022" duration="15816000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43988000" />
+    <option name="totallyTimeSpent" value="52554000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -224,7 +227,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.2982659" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.19653179" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.056647398" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -456,16 +459,6 @@
         <state relative-caret-position="-714" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#button#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/android.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -476,10 +469,20 @@
     <entry file="file://$PROJECT_DIR$/plugins/browser.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="92" column="44" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#button#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/indexneu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="105" column="37" selection-start-line="105" selection-start-column="37" selection-end-line="105" selection-end-column="37" />
+        <state relative-caret-position="604">
+          <caret line="220" column="64" lean-forward="true" selection-start-line="220" selection-start-column="64" selection-end-line="220" selection-end-column="64" />
         </state>
       </provider>
     </entry>
