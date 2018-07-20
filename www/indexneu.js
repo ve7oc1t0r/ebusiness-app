@@ -222,7 +222,7 @@ app = {
                     }
             }
         )
-        
+        finishmarker.setMap(app.map);
     },
 
     onFail: function () {
